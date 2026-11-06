@@ -1,17 +1,30 @@
 # Pedrin Guinchos
 
-Site institucional da Pedrin Guinchos, em Cianorte, PR.
+Site estático da Pedrin Guinchos, em Cianorte, PR.
 
 ## Executar localmente
 
-Site estático, sem dependências ou compilação.
-
 ```sh
-python3 -m http.server 8000 --directory dist
+python3 -m http.server 8000 --directory docs
 ```
 
-Abra http://localhost:8000.
+Abra http://localhost:8000. Não requer instalação ou compilação.
 
-## Hospedagem
+## GitHub Pages
 
-Publique a pasta `dist` em uma hospedagem de sites estáticos. Ela contém HTML, CSS, JavaScript e imagens. O domínio personalizado será configurado após o registro.
+Em Settings → Pages, selecione Deploy from a branch, branch main e pasta /docs. Domínio personalizado: pedringuinchos.online. Ative Enforce HTTPS quando o certificado estiver disponível.
+
+## DNS na Hostinger
+
+Configure quatro registros A com nome @:
+
+- 185.199.108.153
+- 185.199.109.153
+- 185.199.110.153
+- 185.199.111.153
+
+Configure CNAME com nome www e destino JeanVCN.github.io.
+
+Substitua registros de estacionamento conflitantes para @ e www. Preserve os registros de e-mail. Os nameservers podem continuar na Hostinger.
+
+Documentação: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
